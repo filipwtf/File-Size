@@ -3,17 +3,15 @@
     <name>file-size</name>
     <vendor>filipwtf</vendor>
 
-    <!-- Product and plugin compatibility requirements -->
-    <!-- https://www.jetbrains.org/intellij/sdk/docs/basics/getting_started/plugin_compatibility.html -->
     <depends>com.intellij.modules.platform</depends>
 
-    <extensions defaultExtensionNs="com.intellij">
-        <applicationService serviceImplementation="com.github.filipwtf.filesize.services.MyApplicationService"/>
-        <projectService serviceImplementation="com.github.filipwtf.filesize.services.MyProjectService"/>
-    </extensions>
+    <actions>
+        <action id="com.github.filipwtf.filesize.FileSize" class="com.github.filipwtf.filesize.FileSize"
+                text="FileSizeAction"/>
+    </actions>
 
-    <projectListeners>
-        <listener class="com.github.filipwtf.filesize.listeners.MyProjectManagerListener"
-                  topic="com.intellij.openapi.project.ProjectManagerListener"/>
-    </projectListeners>
+    <applicationListeners>
+        <listener class="com.github.filipwtf.filesize.listeners.FileSaveListener"
+                  topic="com.intellij.openapi.vfs.newvfs.BulkFileListener"/>
+    </applicationListeners>
 </idea-plugin>
