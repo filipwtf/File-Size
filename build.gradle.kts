@@ -1,4 +1,3 @@
-import io.gitlab.arturbosch.detekt.Detekt
 import org.jetbrains.changelog.closure
 import org.jetbrains.changelog.markdownToHTML
 import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
@@ -12,10 +11,6 @@ plugins {
     id("org.jetbrains.intellij") version "0.4.22"
     // gradle-changelog-plugin - read more: https://github.com/JetBrains/gradle-changelog-plugin
     id("org.jetbrains.changelog") version "0.5.0"
-    // detekt linter - read more: https://detekt.github.io/detekt/gradle.html
-    id("io.gitlab.arturbosch.detekt") version "1.13.1"
-    // ktlint linter - read more: https://github.com/JLLeitschuh/ktlint-gradle
-    id("org.jlleitschuh.gradle.ktlint") version "9.4.0"
 }
 
 val pluginGroup: String by project
@@ -36,7 +31,6 @@ repositories {
     jcenter()
 }
 dependencies {
-    detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.13.1")
 }
 
 intellij {
@@ -45,17 +39,6 @@ intellij {
     type = platformType
     downloadSources = platformDownloadSources.toBoolean()
     updateSinceUntilBuild = true
-}
-
-detekt {
-    config = files("./detekt-config.yml")
-    buildUponDefaultConfig = true
-
-    reports {
-        html.enabled = false
-        xml.enabled = false
-        txt.enabled = false
-    }
 }
 
 tasks {
@@ -68,10 +51,6 @@ tasks {
         getByName<KotlinCompile>(it) {
             kotlinOptions.jvmTarget = "1.8"
         }
-    }
-
-    withType<Detekt> {
-        jvmTarget = "1.8"
     }
 
     patchPluginXml {
@@ -87,7 +66,8 @@ tasks {
                         val end = "<!-- Plugin description end -->"
 
                         if (!containsAll(listOf(start, end))) {
-                            throw GradleException("Plugin description section not found in README.md file:\n$start ... $end")
+                            throw GradleException("Plugin description section not " +
+                                    "found in README.md file:\n$start ... $end")
                         }
                         subList(indexOf(start) + 1, indexOf(end))
                     }.joinToString("\n").run { markdownToHTML(this) }

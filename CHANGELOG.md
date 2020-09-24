@@ -15,3 +15,4 @@
 
 ### Removed
 - Removed templatecode
+- Remove detectk and klint (pain) 
