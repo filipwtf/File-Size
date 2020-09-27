@@ -4,8 +4,6 @@
 
 ## [Unreleased]
 
-## [0.0.2]
-
 ### Changed
 
 - Rename from file-size to File-Size
@@ -35,5 +33,5 @@
 - Removed template code
 - Remove detectk and klint (pain)
 
-[0.0.1]()
+[Unreleased](https://github.com/filipwtf/File-Size/compare/v0.0.1...HEAD)
 [0.0.1](https://github.com/filipwtf/file-size/releases/tag/v0.0.1)

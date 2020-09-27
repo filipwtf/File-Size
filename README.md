@@ -6,10 +6,10 @@
 
 <!-- Plugin description -->
 
-### This plugin displays the current file 📜 size
-
+### This plugin displays the current file 📜 sizeg
 - Hint is displayed when you save
-  ![Example](example.gif)
+
+![Example](example.gif)
 
 <!-- Plugin description end -->
 
