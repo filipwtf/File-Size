@@ -13,7 +13,6 @@ import com.intellij.openapi.vfs.newvfs.events.VFileEvent
 class FileSaveListener : BulkFileListener {
 
     override fun after(events: MutableList<out VFileEvent>) {
-        println("Hello")
         run {
             ActionManager.getInstance().tryToExecute(FileSize(), ActionCommand.getInputEvent
             ("EditorCompleteStatement"), null, ActionPlaces.UNKNOWN, true)

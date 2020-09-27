@@ -1,6 +1,6 @@
 <idea-plugin>
     <id>com.github.filipwtf.filesize</id>
-    <name>file-size</name>
+    <name>File-Size</name>
     <vendor>filipwtf</vendor>
 
     <depends>com.intellij.modules.platform</depends>

@@ -62,10 +62,6 @@ jobs:
           path: ~/.gradle/wrapper
           key: ${{ runner.os }}-gradle-wrapper-${{ hashFiles('**/gradle/wrapper/gradle-wrapper.properties') }}
 
-      # Run detekt, ktlint and tests
-      - name: Run Linters and Test
-        run: ./gradlew check
-
       # Run verifyPlugin Gradle task
       - name: Verify Plugin
         run: ./gradlew verifyPlugin
@@ -74,7 +70,6 @@ jobs:
   # Requires test job to be passed
   build:
     name: Build
-    needs: test
     runs-on: ubuntu-latest
     outputs:
       name: ${{ steps.properties.outputs.name }}
