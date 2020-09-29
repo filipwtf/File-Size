@@ -9,7 +9,7 @@
 ### This plugin displays the current file 📜 sizeg
 - Hint is displayed when you save
 
-![Example](example.gif)
+![Example](https://github.com/filipwtf/File-Size/blob/main/example.gif)
 
 <!-- Plugin description end -->
 
