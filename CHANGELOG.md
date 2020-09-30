@@ -4,6 +4,16 @@
 
 ## [Unreleased]
 
+- Fixed icon
+
+## [0.0.4]
+
+### Changed
+
+- Tried to fix icon
+
+## [0.0.3]
+
 ### Changed
 
 - Icon has been changed
