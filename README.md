@@ -1,4 +1,4 @@
-# Intellij File Size Display plugin
+# ![logo](src/main/resources/META-INF/pluginIcon.svg) Intellij File Size Display plugin
 
 ![Build](https://github.com/filipwtf/file-size/workflows/Build/badge.svg)
 [![Version](https://img.shields.io/jetbrains/plugin/v/com.github.filipwtf.filesize.svg)](https://plugins.jetbrains.com/plugin/15127-file-size/versions)
