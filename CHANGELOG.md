@@ -2,9 +2,11 @@
 
 # File-Size Changelog
 
-## [Unreleased]
+## [0.0.6]
 
-- Fixed icon
+### Changed
+
+- Icon should be working
 
 ## [0.0.4]
 
