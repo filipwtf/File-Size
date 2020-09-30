@@ -6,8 +6,15 @@
 
 ### Changed
 
+- Icon has been changed
+- Fixed typo in readme and changelog
+
+## [0.0.2]
+
+### Changed
+
 - Rename from file-size to File-Size
-- Clearned up code
+- Cleaned up code
 
 ### Remove
 
@@ -33,5 +40,6 @@
 - Removed template code
 - Remove detectk and klint (pain)
 
-[Unreleased](https://github.com/filipwtf/File-Size/compare/v0.0.1...HEAD)
+[Unreleased](https://github.com/filipwtf/File-Size/compare/v0.0.2...HEAD)
+[0.0.1](https://github.com/filipwtf/file-size/releases/tag/v0.0.2)
 [0.0.1](https://github.com/filipwtf/file-size/releases/tag/v0.0.1)
